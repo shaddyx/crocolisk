@@ -1,0 +1,72 @@
+
+<!--
+Created by shaddy on 26.05.16.
+
+-->
+<!--Created by shaddy on 26.05.16.
+-->
+<!--Created by shaddy on 26.05.16.
+--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--meta(http-equiv='Content-Security-Policy', content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *")meta(http-equiv='Content-Security-Policy', content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'")
+    -->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/ionic/release/css/ionic.min.css"/>
+    <title>Application</title>
+    <script type="text/javascript" src="js/tools/dbgConsole.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/controllers/CrocoliskMainController.js"></script>
+    <script type="text/javascript" src="js/controllers/SettingsController.js"></script>
+    <script type="text/javascript" src="js/services/WordsService.js"></script>
+    <script type="text/javascript" src="js/services/SettingsService.js"></script>
+  </head>
+  <body>
+    <ion-tabs>
+      <ion-tab title="Rates" ng-controller="CrocoliskMainController">
+        <ion-header-bar class="bar-header bar bar-stable">
+          <h1 class="title">Слова
+          </h1>
+        </ion-header-bar>
+        <ion-content has-header="true">
+          <ion-header-bar class="bar-subheader bar bar-assertive" ng-show="error">
+            <h1 class="title">{{error}}
+            </h1>
+          </ion-header-bar>Количество слов в базе: {{words.length}}
+          <div class="row">
+            <H1 class="center">{{word}}</H1>
+          </div>
+          <div class="row">
+            <div class="center">
+              <button class="button button-dark" ng-click="nextWord()">generate
+              </button>
+            </div>
+          </div>
+        </ion-content>
+      </ion-tab>
+      <!--ion-tab(title="Settings")
+      +headerBar
+        | Settings
+      ion-content
+        ion-checkbox(ng-model="isChecked")
+          | Checkbox Label
+      -->
+    </ion-tabs>
+    <!--
+    +stableHeaderBar
+      |hello
+    ion-content
+    
+    -->
+    <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-http": {
+            "PACKAGE_NAME": "ua.org.shaddy.hello"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ua.org.shaddy.hello"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "ua.org.shaddy.hello"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "ua.org.shaddy.hello"
+        }
+    }
+}

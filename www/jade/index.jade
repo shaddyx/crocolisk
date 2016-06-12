@@ -1,0 +1,54 @@
+include cordovaTools/basic
+include tools/tools
+include ionic/ionic
+doctype html
+html(lang="en")
+  head
+    +cordovaMeta
+    +css("css/main.css")
+    +css("bower_components/ionic/release/css/ionic.min.css")
+    title Application
+    +js("js/tools/dbgConsole.js")
+    +js("bower_components/angular/angular.js")
+    +js("bower_components/angular-animate/angular-animate.js")
+    +js("bower_components/angular-sanitize/angular-sanitize.js")
+    +js("bower_components/angular-ui-router/release/angular-ui-router.js")
+    +js("bower_components/ionic/release/js/ionic.bundle.min.js")
+    +js("js/index.js")
+    +js("js/controllers/CrocoliskMainController.js")
+    +js("js/controllers/SettingsController.js")
+    +js("js/services/WordsService.js")
+    +js("js/services/SettingsService.js")
+
+
+  body
+    ion-tabs
+      ion-tab(title="Rates",ng-controller="CrocoliskMainController")
+        +headerBar
+          | Слова
+        ion-content(has-header="true")
+          +subHeaderBar("bar-assertive")(ng-show="error")
+            | {{error}}
+          |Количество слов в базе: {{words.length}}
+          .row
+            H1.center
+              |{{word}}
+          .row
+            .center
+              +button("button-dark")(ng-click="nextWord()")
+                | generate
+
+      //ion-tab(title="Settings")
+        +headerBar
+          | Settings
+        ion-content
+          ion-checkbox(ng-model="isChecked")
+            | Checkbox Label
+    //
+      +stableHeaderBar
+        |hello
+      ion-content
+
+    +cordovaJs
+
+
